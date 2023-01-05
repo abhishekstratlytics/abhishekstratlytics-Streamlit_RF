@@ -73,7 +73,7 @@ d=d.sort_values(by='Features Score', ascending=False)
 d.reset_index(inplace=True)
 d.rename({'index':'Features'},axis=1,inplace=True)
 st.dataframe(d, width=500, height=500)
-
+st.bar_chart(d)
 #st.pyplot(fig)
 # # Explaining the model's predictions using SHAP values
 # # https://github.com/slundberg/shap
