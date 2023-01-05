@@ -10,8 +10,8 @@ from sklearn.inspection import permutation_importance
 from matplotlib import pyplot as plt
 
 st.write("""
-# Boston House Price Prediction App
-This app predicts the **Boston House Price**!
+# Regression Model
+This app predicts using **Random Forest**!
 """)
 st.write('---')
 
@@ -69,7 +69,7 @@ st.write('---')
 st.header('Important Features')
 d = pd.DataFrame(model.feature_importances_,columns=["Features"])
 d.index = header 
-st.dataframe(d, width=600, height=1200)
+st.dataframe(d, width=500, height=800)
 
 # # Explaining the model's predictions using SHAP values
 # # https://github.com/slundberg/shap
