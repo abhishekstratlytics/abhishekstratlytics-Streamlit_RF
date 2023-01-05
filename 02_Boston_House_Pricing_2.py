@@ -73,8 +73,8 @@ d=d.sort_values(by='Features Score', ascending=False)
 d.reset_index(inplace=True)
 d.rename({'index':'Features'},axis=1,inplace=True)
 st.dataframe(d, width=500, height=500)
-fig= plt.bar(d["Features'],d['Features Score'])
-st.pyplot(fig)
+g=d.plot.bar(x="Features", y="Features Score")
+st.pyplot(g)
                
 # d2=d.T
 # st.bar_chart(d2)
