@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 #import shap
 import numpy as np
 from sklearn import datasets
-from sklearn.datasets import fetch_california_housing
+#from sklearn.datasets import fetch_california_housing
 from sklearn.ensemble import RandomForestRegressor
 st.set_option('deprecation.showPyplotGlobalUse', False)
 
