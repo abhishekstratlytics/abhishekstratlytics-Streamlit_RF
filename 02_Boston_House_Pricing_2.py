@@ -67,10 +67,10 @@ st.write('---')
 
 ## Features
 st.header('Important Features')
-d = pd.DataFrame(model.feature_importances_,columns=["Features"])
+d = pd.DataFrame(model.feature_importances_,columns=["Features Score"])
 d.index = header 
-d.sort_values(by='Features', ascending=False)
-d.reset_index(inplace=True)
+d.sort_values(by='Features Score', ascending=False)
+d.reset_index(inplace=True).rename(columns={d.index.name:'Features'})
 st.dataframe(d, width=500, height=800)
 
 #st.pyplot(fig)
