@@ -49,8 +49,8 @@ def user_input_features():
             'LSTAT': LSTAT}
     features = pd.DataFrame(data, index=[0])
     return features
-
-df = user_input_features()
+st.write(features)
+#df = user_input_features()
 
 # Main Panel
 
