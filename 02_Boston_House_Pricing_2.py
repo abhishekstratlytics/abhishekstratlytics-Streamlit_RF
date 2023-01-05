@@ -42,7 +42,7 @@ PTRATIO = st.sidebar.slider('PTRATIO',min(X.PTRATIO),max(X.PTRATIO),mean(X.PTRAT
 B = st.sidebar.slider('B',min(X.B),max(X.B),mean(X.B))
 LSTAT = st.sidebar.slider('LSTAT',min(X.LSTAT),max(X.LSTAT),mean(X.LSTAT))
 data = {'CRIM': CRIM,'ZN': ZN,'INDUS': INDUS,'NOX': NOX,'RM': RM,'AGE': AGE,'DIS': DIS,'RAD': RAD,'TAX': TAX,'PTRATIO': PTRATIO,'B': B,'LSTAT': LSTAT}
-features = pd.DataFrame(data)
+features = pd.DataFrame(data, index=[0]))
 st.write(features)
 # def user_input_features():
 #     CRIM = st.sidebar.slider('CRIM', X.CRIM.min(), X.CRIM.max(), X.CRIM.mean())
