@@ -29,7 +29,7 @@ st.write(Y.head(2))
 # Header of Specify Input Parameters
 st.sidebar.header('Specify Input Parameters')
 def user_input_features():
-    CRIM = st.sidebar.slider('CRIM',X.CRIM.min(),X.CRIM.max(),round(X.CRIM.mean(),1))
+    CRIM = st.sidebar.slider('CRIM',X.CRIM.min(),X.CRIM.max(),X.CRIM.mean())
     ZN = st.sidebar.slider('ZN',X.ZN.min(),X.ZN.max(),X.ZN.mean())
     INDUS = st.sidebar.slider('INDUS',X.INDUS.min(),X.INDUS.max(),X.INDUS.mean())
     CHAS = st.sidebar.slider('CHAS',X.CHAS.min(),X.CHAS.max(),X.CHAS.mean())
