@@ -70,7 +70,7 @@ st.header('Important Features')
 d = pd.DataFrame(model.feature_importances_,columns=["Features Score"])
 d.index = header 
 d.sort_values(by='Features Score', ascending=False)
-d..rename_axis('Features').reset_index(inplace=True)
+d.rename_axis('Features').reset_index(inplace=True)
 st.dataframe(d, width=500, height=800)
 
 #st.pyplot(fig)
