@@ -73,6 +73,10 @@ d=d.sort_values(by='Features Score', ascending=False)
 d.reset_index(inplace=True)
 d.rename({'index':'Features'},axis=1,inplace=True)
 st.dataframe(d, width=500, height=500)
+fig = plt.figure() 
+plt.plot(g) 
+
+st.pyplot(fig)
 # g=plt.plot(d,'Features','Features Score')
 # st.pyplot(g)
                
