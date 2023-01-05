@@ -74,12 +74,9 @@ d.reset_index(inplace=True)
 d.rename({'index':'Features'},axis=1,inplace=True)
 st.dataframe(d, width=500, height=500)
 fig = plt.figure() 
-plt.plot(d) 
+plt.plot([1, 2, 3, 4, 5]) 
 
 st.pyplot(fig)
-# g=plt.plot(d,'Features','Features Score')
-# st.pyplot(g)
-               
 # d2=d.T
 # st.bar_chart(d2)
 #st.pyplot(fig)
