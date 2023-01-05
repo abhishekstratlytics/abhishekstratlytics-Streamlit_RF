@@ -67,7 +67,8 @@ st.write('---')
 
 ## Features
 st.header('Important Features')
-d = pd.DataFrame(model.feature_importances_)
+d = pd.DataFrame(model.feature_importances_,columns=["Features"])
+d.index = header  
 st.write(d)
 
 # # Explaining the model's predictions using SHAP values
