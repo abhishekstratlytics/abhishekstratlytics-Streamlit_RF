@@ -36,7 +36,7 @@ def user_input_features():
     ZN = st.sidebar.slider('ZN', min(X.ZN), max(X.ZN), np.mean(X.ZN))
     INDUS = st.sidebar.slider('INDUS', min(X.INDUS), max(X.INDUS), np.mean(X.INDUS))
     CHAS = st.sidebar.slider('CHAS', min(X.CHAS), max(X.CHAS), np.mean(X.CHAS))
-    NOX = st.sidebar.slider('NOX', min(X.NOX.), max(X.NOX.), np.mean(X.NOX))
+    NOX = st.sidebar.slider('NOX', min(X.NOX), max(X.NOX), np.mean(X.NOX))
     RM = st.sidebar.slider('RM', min(X.RM), max(X.RM), np.mean(X.RM))
     AGE = st.sidebar.slider('AGE', min(X.AGE), max(X.AGE), np.mean(X.AGE))
     DIS = st.sidebar.slider('DIS', min(X.DIS), max(X.DIS), np.mean(X.DIS))
