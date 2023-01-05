@@ -6,6 +6,8 @@ import pandas as pd
 from sklearn.ensemble import RandomForestRegressor
 import numpy as np
 from statistics import mean
+from sklearn.inspection import permutation_importance
+from matplotlib import pyplot as plt
 
 st.write("""
 # Boston House Price Prediction App
