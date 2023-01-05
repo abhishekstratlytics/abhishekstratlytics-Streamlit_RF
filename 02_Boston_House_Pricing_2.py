@@ -1,9 +1,10 @@
 import streamlit as st
 import pandas as pd
 #import shap
-import matplotlib.pyplot as plt
-from sklearn import datasets
-from sklearn.ensemble import RandomForestRegressor
+#import matplotlib.pyplot as plt
+#from sklearn import datasets
+#from sklearn.ensemble import RandomForestRegressor
+import numpy as np
 
 st.write("""
 # Boston House Price Prediction App
@@ -67,20 +68,20 @@ LSTAT = st.sidebar.slider('LSTAT', X.LSTAT.min(), X.LSTAT.max(), X.LSTAT.mean())
 
 # Main Panel
 
-# Print specified input parameters
-st.header('Specified Input parameters')
-st.write(df)
-st.write('---')
+# # Print specified input parameters
+# st.header('Specified Input parameters')
+# st.write(df)
+# st.write('---')
 
-# Build Regression Model
-model = RandomForestRegressor()
-model.fit(X, Y)
-# Apply Model to Make Prediction
-prediction = model.predict(df)
+# # Build Regression Model
+# model = RandomForestRegressor()
+# model.fit(X, Y)
+# # Apply Model to Make Prediction
+# prediction = model.predict(df)
 
-st.header('Prediction of MEDV')
-st.write(prediction)
-st.write('---')
+# st.header('Prediction of MEDV')
+# st.write(prediction)
+# st.write('---')
 
 # # Explaining the model's predictions using SHAP values
 # # https://github.com/slundberg/shap
