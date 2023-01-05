@@ -3,7 +3,7 @@ import pandas as pd
 #import shap
 #import matplotlib.pyplot as plt
 #from sklearn import datasets
-#from sklearn.ensemble import RandomForestRegressor
+from sklearn.ensemble import RandomForestRegressor
 import numpy as np
 from statistics import mean
 
@@ -43,7 +43,7 @@ PTRATIO = st.sidebar.slider('PTRATIO',min(X.PTRATIO),max(X.PTRATIO),mean(X.PTRAT
 B = st.sidebar.slider('B',min(X.B),max(X.B),mean(X.B))
 LSTAT = st.sidebar.slider('LSTAT',min(X.LSTAT),max(X.LSTAT),mean(X.LSTAT))
 data = {'CRIM': CRIM,'ZN': ZN,'INDUS': INDUS,'CHAS': CHAS,'NOX': NOX,'RM': RM,'AGE': AGE,'DIS': DIS,'RAD': RAD,'TAX': TAX,'PTRATIO': PTRATIO,'B': B,'LSTAT': LSTAT}
-st.write(data)
+#st.write(data)
 df = pd.DataFrame(data, index=[0])
 
 # Main Panel
@@ -54,14 +54,14 @@ st.write(df)
 st.write('---')
 
 # # Build Regression Model
-# model = RandomForestRegressor()
-# model.fit(X, Y)
-# # Apply Model to Make Prediction
-# prediction = model.predict(df)
+model = RandomForestRegressor()
+model.fit(X, Y)
+# Apply Model to Make Prediction
+prediction = model.predict(df)
 
-# st.header('Prediction of MEDV')
-# st.write(prediction)
-# st.write('---')
+st.header('Prediction of MEDV')
+st.write(prediction)
+st.write('---')
 
 # # Explaining the model's predictions using SHAP values
 # # https://github.com/slundberg/shap
