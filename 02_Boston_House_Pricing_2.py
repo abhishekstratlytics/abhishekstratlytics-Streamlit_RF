@@ -28,7 +28,7 @@ st.write(Y.head(2))
 # Sidebar
 # Header of Specify Input Parameters
 st.sidebar.header('Specify Input Parameters')
-CRIM = st.sidebar.slider('CRIM',X.CRIM.min(),X.CRIM.max())
+CRIM = st.sidebar.slider('CRIM',min(X.CRIM),max(X.CRIM))
 # ZN = st.sidebar.slider('ZN', X.ZN.min(), X.ZN.max(), X.ZN.mean())
 # INDUS = st.sidebar.slider('INDUS', X.INDUS.min(), X.INDUS.max(), X.INDUS.mean())
 # CHAS = st.sidebar.slider('CHAS', X.CHAS.min(), X.CHAS.max(), X.CHAS.mean())
