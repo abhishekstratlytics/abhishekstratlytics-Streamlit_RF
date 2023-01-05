@@ -75,6 +75,9 @@ d.rename({'index':'Features'},axis=1,inplace=True)
 st.dataframe(d, width=500, height=500)
 fig = plt.figure() 
 plt.bar(d['Features'],d['Features Score']) 
+plt.xlabel("Features")
+plt.ylabel("Feature Score")
+plt.title("Determining Factors")
 
 st.pyplot(fig)
 # d2=d.T
