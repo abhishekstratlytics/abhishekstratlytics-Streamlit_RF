@@ -1,7 +1,7 @@
 import streamlit as st 
 import pandas as pd 
 import matplotlib.pyplot as plt 
-import shap
+#import shap
 import numpy as np
 from sklearn import datasets
 from sklearn.datasets import fetch_california_housing
