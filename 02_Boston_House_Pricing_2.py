@@ -71,7 +71,7 @@ d = pd.DataFrame(model.feature_importances_,columns=["Features Score"])
 d.index = header 
 d.sort_values(by='Features Score', ascending=False)
 d.rename_axis('Features').reset_index(inplace=True)
-st.dataframe(d, width=500, height=800)
+st.dataframe(d, width=500, height=500)
 
 #st.pyplot(fig)
 # # Explaining the model's predictions using SHAP values
