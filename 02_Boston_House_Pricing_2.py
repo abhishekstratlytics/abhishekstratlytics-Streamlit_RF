@@ -29,7 +29,7 @@ st.write(Y.head(2))
 
 # Sidebar
 # Header of Specify Input Parameters
-st.sidebar.header('Specify Input Parameters')
+# st.sidebar.header('Specify Input Parameters')
 # def user_input_features():
 #     CRIM = st.sidebar.slider('CRIM',X.CRIM.min(),X.CRIM.max(),X.CRIM.mean())
 #     ZN = st.sidebar.slider('ZN',X.ZN.min(),X.ZN.max(),X.ZN.mean())
@@ -53,19 +53,19 @@ st.sidebar.header('Specify Input Parameters')
 # Main Panel
 
 #Print Specified input Parameters
-st.header('Specified Input Parameters')
-#st.write(df)
-st.write('---')
+# st.header('Specified Input Parameters')
+# #st.write(df)
+# st.write('---')
 
-# Build Regression Model
-model =RandomForestRegressor()
-model.fit(X,Y)
-#Apply model to make prediction
-prediction = model.predict(df)
+# # Build Regression Model
+# model =RandomForestRegressor()
+# model.fit(X,Y)
+# #Apply model to make prediction
+# prediction = model.predict(df)
 
-st.header('Prediction of MEDV')
-st.write(prediction)
-st.write('---')
+# st.header('Prediction of MEDV')
+# st.write(prediction)
+# st.write('---')
 
 
 # # Explain the model's predictability using SHAP values
