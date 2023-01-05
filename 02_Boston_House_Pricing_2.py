@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 #import shap
-#import matplotlib.pyplot as plt
+import matplotlib.pyplot as plt
 #from sklearn import datasets
 from sklearn.ensemble import RandomForestRegressor
 import numpy as np
@@ -71,6 +71,7 @@ d = pd.DataFrame(model.feature_importances_,columns=["Features"])
 d.index = header 
 d.sort_values(by='Features', ascending=False)
 st.dataframe(d, width=500, height=800)
+st.write(plt.barh(boston.feature_names, rf.feature_importances_))
 
 # # Explaining the model's predictions using SHAP values
 # # https://github.com/slundberg/shap
