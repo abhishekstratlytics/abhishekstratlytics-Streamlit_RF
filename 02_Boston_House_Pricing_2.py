@@ -21,7 +21,9 @@ data = np.hstack([raw_df.values[::2, :], raw_df.values[1::2, :2]])
 target = raw_df.values[1::2, 2]
 header= ["CRIM","ZN","INDUS","CHAS","NOX","RM","AGE","DIS","RAD","TAX","PTRATIO","B","LSTAT"]
 X = pd.DataFrame(data,columns=header)
+X = X.astype(int)
 Y = pd.DataFrame(target,columns=["MEDV"])
+Y = Y.astype(int)
 st.write(X.head(2))
 st.write(Y.head(2))
 
