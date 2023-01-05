@@ -42,7 +42,7 @@ def user_input_features():
     DIS = st.sidebar.slider('DIS', min(X.DIS), max(X.DIS), np.mean(X.DIS))
     RAD = st.sidebar.slider('RAD', min(X.RAD), max(X.RAD), np.mean(X.RAD))
     TAX = st.sidebar.slider('TAX', min(X.TAX), max(X.TAX), np.mean(X.TAX))
-    PTRATIO = st.sidebar.slider('PTRATIO', .min(X.PTRATIO), max(X.PTRATIO), np.mean(X.PTRATIO))
+    PTRATIO = st.sidebar.slider('PTRATIO', min(X.PTRATIO), max(X.PTRATIO), np.mean(X.PTRATIO))
     B = st.sidebar.slider('B', min(X.B), max(X.B), np.mean(X.B))
     LSTAT = st.sidebar.slider('LSTAT', (X.LSTAT), max(X.LSTAT), np.mean(X.LSTAT))
     data = {'CRIM': CRIM,
