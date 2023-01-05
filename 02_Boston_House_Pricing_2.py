@@ -5,6 +5,7 @@ import pandas as pd
 #from sklearn import datasets
 #from sklearn.ensemble import RandomForestRegressor
 import numpy as np
+from statistics import mean
 
 st.write("""
 # Boston House Price Prediction App
@@ -28,7 +29,7 @@ st.write(Y.head(2))
 # Sidebar
 # Header of Specify Input Parameters
 st.sidebar.header('Specify Input Parameters')
-CRIM = st.sidebar.slider('CRIM',min(X.CRIM),max(X.CRIM))
+CRIM = st.sidebar.slider('CRIM',min(X.CRIM),max(X.CRIM),mean(X.CRIM))
 # ZN = st.sidebar.slider('ZN', X.ZN.min(), X.ZN.max(), X.ZN.mean())
 # INDUS = st.sidebar.slider('INDUS', X.INDUS.min(), X.INDUS.max(), X.INDUS.mean())
 # CHAS = st.sidebar.slider('CHAS', X.CHAS.min(), X.CHAS.max(), X.CHAS.mean())
