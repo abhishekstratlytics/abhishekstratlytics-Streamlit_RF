@@ -65,6 +65,11 @@ st.header('Prediction of MEDV')
 st.write(prediction)
 st.write('---')
 
+## Features
+st.header('Important Features')
+d=model.feature_importances_
+st.write(d)
+
 # # Explaining the model's predictions using SHAP values
 # # https://github.com/slundberg/shap
 # explainer = shap.TreeExplainer(model)
