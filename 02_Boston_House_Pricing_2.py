@@ -69,6 +69,7 @@ st.write('---')
 st.header('Important Features')
 d = pd.DataFrame(model.feature_importances_,columns=["Features"])
 d.index = header 
+d.sort_values(by='Features', ascending=False)
 st.dataframe(d, width=500, height=800)
 
 # # Explaining the model's predictions using SHAP values
