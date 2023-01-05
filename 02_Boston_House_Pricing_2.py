@@ -41,7 +41,7 @@ TAX = st.sidebar.slider('TAX',min(X.TAX),max(X.TAX),mean(X.TAX))
 PTRATIO = st.sidebar.slider('PTRATIO',min(X.PTRATIO),max(X.PTRATIO),mean(X.PTRATIO))
 B = st.sidebar.slider('B',min(X.B),max(X.B),mean(X.B))
 LSTAT = st.sidebar.slider('LSTAT',min(X.LSTAT),max(X.LSTAT),mean(X.LSTAT))
-data = {'CRIM': CRIM,'ZN': ZN}
+data = {'CRIM': CRIM,'ZN': ZN,'INDUS': INDUS,'NOX': NOX,'RM': RM,'AGE': AGE,'DIS': DIS,'RAD': RAD,'TAX': TAX,'PTRATIO': PTRATIO,'B': B,'LSTAT': LSTAT}
 st.write(data)
 # def user_input_features():
 #     CRIM = st.sidebar.slider('CRIM', X.CRIM.min(), X.CRIM.max(), X.CRIM.mean())
