@@ -13,9 +13,17 @@ This app predicts the **Boston House Price**!
 st.write('---')
 
 # Loads the Boston House Price Dataset
-boston = datasets.load_boston()
-X = pd.DataFrame(boston.data, columns=boston.feature_names)
-Y = pd.DataFrame(boston.target, columns=["MEDV"])
+st.write('---')
+#Load the Boston House Price Dataset
+data_url = "http://lib.stat.cmu.edu/datasets/boston"
+raw_df = pd.read_csv(data_url, sep="\s+", skiprows=22, header=None)
+data = np.hstack([raw_df.values[::2, :], raw_df.values[1::2, :2]])
+target = raw_df.values[1::2, 2]
+header= ["CRIM","ZN","INDUS","CHAS","NOX","RM","AGE","DIS","RAD","TAX","PTRATIO","B","LSTAT"]
+X = pd.DataFrame(data,columns=header)
+Y = pd.DataFrame(target,columns=["MEDV"])
+st.write(X.head(2))
+st.write(Y.head(2))
 
 # Sidebar
 # Header of Specify Input Parameters
